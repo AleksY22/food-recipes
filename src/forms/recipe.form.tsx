@@ -82,7 +82,6 @@ const RecipeForm = ({ initialRecipe }: RecipeFormProps) => {
         : await addRecipe(formData);
 
       if (result.success) {
-        console.log(1);
         setFormData(initialState);
         setIngredientFields([{ id: 0, ingredientId: "", quantity: null }]);
         router.push("/");
