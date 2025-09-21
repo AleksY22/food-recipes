@@ -55,7 +55,7 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
         <h2 className="text-xl font-bold">{recipe.name}</h2>
       </CardHeader>
       <CardBody className="flex-1 text-black">
-        <p className="text-gray-600 line-clamp-6">
+        <p className="text-gray-600 line-clamp-6 h-auto">
           {recipe.description || "Без описания"}
         </p>
         <h3 className="mt-4 font-semibold">Ингредиенты:</h3>
