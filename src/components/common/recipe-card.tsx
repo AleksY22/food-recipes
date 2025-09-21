@@ -55,11 +55,11 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
         <h2 className="text-xl font-bold">{recipe.name}</h2>
       </CardHeader>
       <CardBody className="flex-1 text-black">
-        <p className="text-gray-600 line-clamp-6 h-auto">
+        <p className="text-gray-600 overflow-y-auto h-[30px]">
           {recipe.description || "Без описания"}
         </p>
-        <h3 className="mt-4 font-semibold">Ингредиенты:</h3>
-        <ul className="list-disk pl-5 overflow-y-auto max-h-24">
+        <h3 className="mt-1 font-semibold">Ингредиенты:</h3>
+        <ul className="list-disk pl-5 overflow-y-auto max-h-30">
           {recipe.ingredients.map((ing) => (
             <li key={ing.id}>
               {ing.ingredient.name}: {ing.quantity}{" "}
@@ -68,7 +68,7 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
           ))}
         </ul>
       </CardBody>
-      <div className="flex justify-end gap-2 p-4">
+      <div className="flex justify-end gap-2 p-3">
         <Link href={`/recipes/${recipe.id}`}>
           <Button color="primary" variant="light">
             Редактировать
