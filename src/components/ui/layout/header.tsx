@@ -77,7 +77,7 @@ export default function Header() {
           <p>Загрузка...</p>
         ) : !isAuth ? (
           <>
-            <NavbarItem className="hidden lg:flex">
+            <NavbarItem>
               <Button
                 className="text-white"
                 as={Link}

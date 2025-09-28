@@ -34,7 +34,7 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
   };
 
   return (
-    <Card className="w-full max-w-md h-[480px] flex flex-col">
+    <Card className="w-full max-w-sm h-[480px] flex flex-col mx-auto">
       <div className="h-48 overflow-hidden">
         {recipe.imageUrl ? (
           <div className="relative h-48 group overflow-hidden rounded-lg border">
